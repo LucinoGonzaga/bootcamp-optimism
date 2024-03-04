@@ -331,4 +331,5 @@ const pessoa = { nome: "joão", idade: 30 };
 console.log(formatarPessoa(pessoa)); // João, 30 anos
 
 ```
- 
+ ### Mapa mental
+![Mapa mental aula 02](../discord/aula2-map.jpg)

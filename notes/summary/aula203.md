@@ -200,3 +200,6 @@ Em resumo, o PLONK é um protocolo poderoso e versátil de prova de conhecimento
 1. **Aplicações:** Os Bulletproofs têm uma variedade de aplicações, sendo mais notavelmente utilizados em criptomoedas como o Bitcoin e o Monero. Eles são usados para provar a validade de transações sem revelar informações sensíveis, como os valores transferidos ou os endereços dos remetentes e destinatários.
 
 Em resumo, o Bulletproofs é um protocolo de prova de conhecimento zero altamente eficiente e escalável, com aplicações significativas em criptografia, especialmente em criptomoedas e sistemas baseados em blockchain. Ele oferece um equilíbrio entre privacidade, eficiência e segurança, tornando-o uma ferramenta valiosa em muitos contextos de segurança digital.
+
+ ### Mapa mental
+![Mapa mental aula 03](../discord/aula3-map.jpg)

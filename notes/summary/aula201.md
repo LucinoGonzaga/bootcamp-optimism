@@ -79,3 +79,6 @@ Consiste basicamente em fazer um sorteio aleatório dos nós participantes da re
 ### Proof-of-Authority
 
 Normalmente utilizados em blockchains permissionadas com uma empresa ou entidade centralizadora. Ela será responsável por criar a cadeia de confiança entre os nós, e todos os blocos validados seguem as regras pelo órgão centralizador.
+
+### Mapa mental
+![Mapa mental aula 01](../discord/aula1-map.jpg)

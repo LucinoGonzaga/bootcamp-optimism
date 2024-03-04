@@ -49,3 +49,6 @@ ApeWorkX |[Biblioteca ApeWorkX](https://www.apeworx.io/)|
 |Merkly |[Biblioteca Merkly]()|
 |MythX/Mithril |[Biblioteca MythX/Mithril]()|
 |Sliter |[Biblioteca Sliter]()|
+
+ ### Mapa mental
+![Mapa mental aula 04](../discord/aula4-map.jpg)
