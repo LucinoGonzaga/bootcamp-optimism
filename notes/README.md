@@ -1,4 +1,5 @@
-# RESUMO DAS AULAS BOOTCAMP - NEARX
+# RESUMO DAS AULAS 
+Bootcamp Optimism x [NearX](https://nearx.com.br/bootcamp?utm_campaign=Binance-Pay-BR-NearX-Bootcamp), disponivel no canal do [Youtube](https://www.youtube.com/@Nearxschool).
 
 - [Aula 1](summary/aula201.md)
 - [Aula 2](summary/aula202.md)

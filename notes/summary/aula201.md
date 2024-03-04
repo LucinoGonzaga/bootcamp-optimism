@@ -1,25 +1,22 @@
 [< back](../README.md)
-# RESUMO AULA 1 BOOTCAMP - NEARX - FEV/2024
+# MÓDULO 2 - AULA 1 
+Essa aula foi ministrada pelo instrutor [Lucas Oliveira](https://www.linkedin.com/in/olivmath/), esta diponivel no [Youtube](https://www.youtube.com/watch?v=yModQgXgCdI) ou através da [plataforma da NearX](https://app.nearx.com.br/course/module/51?courseid=14&moduleid=51&lessonid=350&order=1).
 
-## WALLET
 
-### Funções de Hash 
+## 1. WALLET
 
-Eu gosto muito desse site para explicar o que é uma Hash.
-Nele você digita uma informação, e já aparece um hash usando o algoritmo sha256.
-Basta mudar, colocando " . " ou um espaço mesmo, e você entenderá o conceito de avalanche, determinístico, resistente à colisão, fácil de computar, impossibilidade de reverter.
+### 1.1 Funções de Hash 
+Funções de hash desempenham um papel crucial na tecnologia blockchain. São algoritmos matemáticos que recebem uma entrada (ou 'mensagem') e retornam uma sequência de bytes de tamanho fixo. O resultado, tipicamente um 'resumo', é único para cada entrada única. Funções de hash são determinísticas, o que significa que a mesma entrada sempre produzirá o mesmo resultado.
 
-[Exemplo de Hash com SHA256](https://tools.superdatascience.com/blockchain/hash/)
+Exemplo: 
 
-Neste mesmo site é possível entender o conceito de bloco e nonce:
+| Entrada | Retorno [sha256](https://tools.superdatascience.com/blockchain/hash/) |
+| :--- | :-- | 
+|nearx | 0d1977447634f5f09d1437ae6374fca5266fccd4312c0b08f2c7ba29f79ee374|
+| Nearx | 44e1c222a49649d979423f809b6352d5de2c468f2d9f403a3372199d1b8f4630 |
 
-[Entendendo o Bloco e o Nonce](https://tools.superdatascience.com/blockchain/block;)
 
-Posteriormente, o conceito de Blockchain:
-
-[Conceito Básico de uma Blockchain](https://tools.superdatascience.com/blockchain/blockchain)
-
-### Chaves Públicas
+### 1.2 Chaves Públicas
 
 O Conceito de Chaves Públicas e Privadas, refere-se ao conceito de Criptografia assimétrica.
 A Chave PRIVADA **NUNCA**, em **NENHUMA Hipótese**, deve ser revelada.
@@ -32,17 +29,17 @@ Alice recebe a mensagem, e consegue recuperar seu conteúdo, abrindo com sua cha
 
 ![Exemplo de Criptografia Simétrica](../discord/chaves.jpg)
 
-### UTXO
+### 1.3 UTXO
 
 UTXO é um protocolo utilizado, principalmente em redes Bitcoin.
 O Conceito é de um Token Único, e caso você queira fracioná-lo, você envia para o destinatário o valor fracionado, e recebe o "troco" em sua própria carteira, com a diferença entre o valor fracionado e as despesas da transação.
 
-### Account-Based
+### 1.4 Account-Based
 
 Account-Based é um conceito usado principalmente em redes Ethereum Alike.
 O Conceito é muito mais simples de entender, pois ele debita os valores de envio e despesas de transações baseados no saldo total de sua conta.
 
-## Transações
+## 2. Transações
 
 ### Ciclo de vida de uma Tx
 
@@ -55,7 +52,7 @@ Em uma Rede Ethereum alike, dependerá do protocolo de consenso utilizado, não 
 As taxas são valores pagos aos mantenedores das redes blockchain.
 Tendo em mente que a rede Blockchain é um grande banco de dados, que necessita de infraestrutura, pessoas, energia e uma série de custos envolvidos, toda transação enviada para ser gravada na blockchain, o emissor paga as taxas de transmissão. em uma rede Ethereum alike, esta taxa é conhecida como *GAS*. As taxas variam de acordo com a rede, regras, utilização, tipo de informação a ser salva, tráfego no momento da solicitação entre outras variáveis.
 
-## Blocos
+## 3. Blocos
 
 ### Criando uma Blockchain
 
@@ -65,7 +62,7 @@ Para criação de um bloco, o nó princial necessita informar e criar o Genesis 
 
 Merkle Tree, nada mais é que uma estrutura de dados que otimiza hashes em uma estrutura de árvore. Ela agrupa 2 ou mais blocos de informação, fazendo com que eu chegue até a raíz, ou genesis block de uma forma muito mais rápida e eficiente, evitando calcular todo o caminho de dados gerados em um bloco. Isso dá escalabilidade em todo o processo.
 
-## Consenso
+## 4. Consenso
 
 ### Proof-of-Work
 
