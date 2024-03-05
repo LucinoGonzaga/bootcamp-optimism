@@ -4,6 +4,7 @@ Essa aula foi ministrada pelo instrutor [Lucas Oliveira](https://www.linkedin.co
 
 
 ## 1. WALLET
+No contexto da criptomoeda e do blockchain, uma carteira é uma ferramenta digital que permite aos usuários armazenar, enviar e receber moedas digitais como Bitcoin, Ethereum, etc. As carteiras podem ser baseadas em software (online, desktop ou móvel) ou em hardware-based (dispositivos físicos).
 
 ### 1.1 Funções de Hash 
 Funções de hash desempenham um papel crucial na tecnologia blockchain. São algoritmos matemáticos que recebem uma entrada (ou 'mensagem') e retornam uma sequência de bytes de tamanho fixo. O resultado, tipicamente um 'resumo', é único para cada entrada única. Funções de hash são determinísticas, o que significa que a mesma entrada sempre produzirá o mesmo resultado.
@@ -16,8 +17,7 @@ Exemplo:
 | Nearx | 44e1c222a49649d979423f809b6352d5de2c468f2d9f403a3372199d1b8f4630 |
 
 
-### 1.2 Chaves Públicas
-
+### 1.2 Chaves Públicas e Privada
 O conceito de chaves públicas e privadas, refere-se ao conceito de criptografia assimétrica.
 A Chave privada **NUNCA**, em **NENHUMA Hipótese**, deve ser revelada.
 Com ela você deriva a chave PÚBLICA, e essa sim, é revelada.
@@ -30,54 +30,57 @@ Alice recebe a mensagem, e consegue recuperar seu conteúdo, abrindo com sua cha
 ![Exemplo de Criptografia Simétrica](../discord/chaves.jpg)
 
 ### 1.3 UTXO
-
 UTXO é um protocolo utilizado, principalmente em redes Bitcoin.
 O Conceito é de um Token Único, e caso você queira fracioná-lo, você envia para o destinatário o valor fracionado, e recebe o "troco" em sua própria carteira, com a diferença entre o valor fracionado e as despesas da transação.
 
 ![Exemplo de Criptografia Simétrica](../discord/utxo.png)
 
 ### 1.4 Account-Based
-
 Account-Based é um conceito usado principalmente em redes Ethereum Alike.
 O Conceito é muito mais simples de entender, pois ele debita os valores de envio e despesas de transações baseados no saldo total de sua conta.
 
 ## 2. Transações
+Uma transação é basicamente um registro de transferência de valor entre partes dentro da rede de uma blockchain.
 
-### Ciclo de vida de uma Tx
+### 2.1 **Remetente (From)**
+A parte que envia o valor. Em uma blockchain, o remetente é identificado pelo endereço de sua carteira digital.
 
-O Ciclo de vida de uma transação, dependerá da tecnologia blockchain.
-No Caso de uma rede Bitcoin por exemplo, a transação só é efetivada, quando sua transação é transmitida e uma determinada quantidade de mineradodes (6 em uma rede de testes por exemplo), confirmam esta transação.
-Em uma Rede Ethereum alike, dependerá do protocolo de consenso utilizado, não existe o conceito de mineração, mas sim, de validação dos blocos, que pode ser por votação dos nós (POA - Proof of Authority), Seleção aleatória de validadores, (Proof of Stake, neste caso, nós com maiores valores em carteira tem mais chances de serem selecionados) entre outros.
+### 2.2 **Destinatário (To)**
+A parte que recebe o valor. Assim como o remetente, o destinatário é identificado por um endereço de carteira.
 
-### Taxas
+### 2.3 **Valor (Value)**
+A quantidade de criptomoeda ou valor digital sendo transferido na transação.
 
-As taxas são valores pagos aos mantenedores das redes blockchain.
-Tendo em mente que a rede Blockchain é um grande banco de dados, que necessita de infraestrutura, pessoas, energia e uma série de custos envolvidos, toda transação enviada para ser gravada na blockchain, o emissor paga as taxas de transmissão. em uma rede Ethereum alike, esta taxa é conhecida como *GAS*. As taxas variam de acordo com a rede, regras, utilização, tipo de informação a ser salva, tráfego no momento da solicitação entre outras variáveis.
+### 2.4 **Taxas (Fees)**
+A maioria das blockchains cobra uma taxa para processar e registrar transações. Essas taxas incentivam os mineradores ou validadores a incluir a transação em um bloco. A taxa pode variar dependendo da complexidade da transação e da congestionamento da rede.
 
-## 3. Blocos
+### 2.5 **Assinatura Digital (Digital Signature)**
+Uma prova criptográfica que o remetente autorizou a transação. A assinatura digital é gerada a partir da chave privada do remetente e pode ser verificada por qualquer um na rede usando a chave pública correspondente do remetente.
 
-### Criando uma Blockchain
+### 2.6 **Dados de Entrada (Input Data)**
+Em transações mais complexas, como aquelas em blockchains que suportam contratos inteligentes (por exemplo, Ethereum), pode haver dados adicionais incluídos para especificar a operação do contrato inteligente ou outros metadados.
 
-Para criação de um bloco, o nó princial necessita informar e criar o Genesis block, e dentro dele ele possui o início das transações e suas regras, bem como o status inicial e seu hash inicial.
+### 2.7 **Registro de Transações**
+Cada transação que envolve seu endereço de carteira é registrada na blockchain. Isso inclui transações onde você recebeu criptomoedas e transações onde você as enviou.
 
-### Merkle Tree
+## 3. Cadeia de Blocos
+A estrutura é composta por uma sequência encadeada de blocos, onde cada bloco contém um conjunto de transações. Cada bloco é vinculado ao anterior por meio de um código hash, formando uma cadeia.
 
-Merkle Tree, nada mais é que uma estrutura de dados que otimiza hashes em uma estrutura de árvore. Ela agrupa 2 ou mais blocos de informação, fazendo com que eu chegue até a raíz, ou genesis block de uma forma muito mais rápida e eficiente, evitando calcular todo o caminho de dados gerados em um bloco. Isso dá escalabilidade em todo o processo.
+### 3.1 Criando uma Blockchain
+Para criação de um bloco, o nó princial necessita informar e criar o Genesis block, e dentro dele ele possui o início das transações e suas regras, bem como o status inicial e seu hash inicial, todos os outros blocos seguem a cadeia através do hash e parenthash que devem seguir a ordem.
+
+### 3.2 Merkle Tree
+Merkle Tree, nada mais é que uma estrutura de dados que otimiza hashes em uma estrutura de árvore. Ela agrupa 2 ou mais blocos de informação, fazendo com que eu chegue até a raíz, ou genesis block de uma forma muito mais rápida e eficiente, evitando calcular todo o caminho de dados gerados em um bloco. Isso dá escalabilidade em todo o processo. 
 
 ## 4. Consenso
+O objetivo do consenso é garantir que todos os participantes da rede concordem sobre as transações válidas e a ordem em que são adicionadas à blockchain.
 
-### Proof-of-Work
-
+### 4.1 Proof-of-Work
 Usado normalmente em redes Biticoin, é o conceito de mineiração.
 Basicamente é a solução do desafio de encontrar uma sequencia de "0's" para criar o hash válido. Este processo consome muita energia, leva muito mais tempo, porém é muito mais seguro e virtualmente impossível de ser atacado ou economicamente inviável criar uma estrutura de ataque à rede.
 
-### Proof-of-Stake
-
+### 4.2 Proof-of-Stake
 Consiste basicamente em fazer um sorteio aleatório dos nós participantes da rede, remunerando-os a cada bloco validado. Nós com maior volume armazenado em sua carteira terão mais chaces de serem selecionados.
 
-### Proof-of-Authority
-
+### 4.3 Proof-of-Authority
 Normalmente utilizados em blockchains permissionadas com uma empresa ou entidade centralizadora. Ela será responsável por criar a cadeia de confiança entre os nós, e todos os blocos validados seguem as regras pelo órgão centralizador.
-
-### Mapa mental
-![Mapa mental aula 01](../discord/aula1-map.jpg)
