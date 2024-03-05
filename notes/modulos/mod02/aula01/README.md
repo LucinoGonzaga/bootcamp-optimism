@@ -20,7 +20,7 @@ Para realizar os procedimentos de teste é necessário realizar a instalação d
 ## 2. Exemplos
 
 #### 2.1 Hash SHA-256
-Testar exemplo
+Mostarar um exemplo de hash SHA-256
 
     python3 main1.py
 
@@ -29,7 +29,7 @@ Instalar o módulo keccaky
 
     pip3 install keccaky
 
-Caso esteja tudo certo execute o comando
+Mostrar um exemplo de hash KECCAK-256
 
     python3 main2.py
 
@@ -38,7 +38,7 @@ Instalar o módulo eth-account
 
     pip3 install eth-account
 
-Caso esteja tudo certo execute o comando
+Exibir o exemplo de uma chave publica e privada.
 
     python3 main3.py
 
@@ -51,14 +51,15 @@ Caso esteja tudo certo execute o comando
 
     python3 main4.py
 
-Outro exemplo do merkle tree
+No ROOT mostra uma unica transação que representa as outras quatro.
 
     python3 main5.py
 
 #### 2.5 Mineração PoW
 
-        python3 main6.py
+    python3 main6.py
 
 #### 2.6 Mineração PoW
+Quem tiver mais saldo na carteira é sorteado mais vezes.
 
-        python3 main7.py
+    python3 main7.py
