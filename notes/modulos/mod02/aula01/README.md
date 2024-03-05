@@ -33,7 +33,7 @@ Mostrar um exemplo de hash KECCAK-256
 
     python3 main2.py
 
-#### 2.3 Chaves Públicas
+#### 2.3 Chaves Públicas e privada
 Instalar o módulo eth-account
 
     pip3 install eth-account
@@ -42,7 +42,12 @@ Exibir o exemplo de uma chave publica e privada.
 
     python3 main3.py
 
-#### 2.4 Merkle Tree
+#### 2.4 Assinatura
+Com base na chave publica e privada gerada uma assinatura.
+
+    python3 main8.py
+
+#### 2.5 Merkle Tree
 Instalar o módulo [merkly](https://github.com/olivmath/merkly).
 
     pip install merkly
@@ -55,11 +60,11 @@ No ROOT mostra uma unica transação que representa as outras quatro.
 
     python3 main5.py
 
-#### 2.5 Mineração PoW
+#### 2.6 Mineração PoW
 
     python3 main6.py
 
-#### 2.6 Mineração PoW
+#### 2.7 Mineração PoW
 Quem tiver mais saldo na carteira é sorteado mais vezes.
 
     python3 main7.py
