@@ -1,3 +1,8 @@
+# Docker
+Para testar os exemplos dessa aula, é interessante iniciar o container execute o comando
+
+    docker-compose up --build nearx-bootcamp
+
 # JavaScript
 
 ## Como funciona um Computador
