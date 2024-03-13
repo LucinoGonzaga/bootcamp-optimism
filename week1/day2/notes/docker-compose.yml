@@ -1,0 +1,17 @@
+version: "3.5"
+services:
+  aula2:
+    image: aula2
+    container_name: aula2
+    build:
+      context: ../
+      dockerfile: notes/Dockerfile
+    ports:
+      - 3330:3001
+    restart: on-failure
+    networks:
+      - aula2_network
+networks:
+  aula2_network:
+    name: aula2_network
+    driver: bridge
